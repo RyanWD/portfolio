@@ -1,0 +1,22 @@
+{
+  "name": "portfolio2020",
+  "version": "1.0.0",
+  "description": "Responsive portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanWD/Portfolio2020.git"
+  },
+  "author": "Ryan Saunders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RyanWD/Portfolio2020/issues"
+  },
+  "homepage": "https://github.com/RyanWD/Portfolio2020#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

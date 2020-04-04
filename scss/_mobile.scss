@@ -108,6 +108,7 @@
     text-align: left;
   }
 }
+
 // Smartphones
 @include mediaSm {
   main {
@@ -149,5 +150,13 @@
   }
   .current-project-text {
     text-align: left;
+  }
+
+  #work-projects {
+    .project-container {
+      div:nth-of-type(1) {
+        font-size: 1rem;
+      }
+    }
   }
 }

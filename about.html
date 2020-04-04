@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Style sheets-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <link rel="stylesheet" href="css/jquery.lineProgressbar.css" />
+
+    <title>About Me</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item current">
+            <a href="about.html" class="nav-link">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">How To Reach Me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="about">
+      <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
+      <h2 class="sm-heading">
+        A little bit about me!
+      </h2>
+      <div class="about-info">
+        <img src="img/newportrait.jpg" alt="portrait" class="bio-image" />
+        <div class="bio">
+          <h3 class="text-secondary">BIO</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          quisquam adipisci ea molestiae ut delectus accusamus aut mollitia
+          distinctio eius?
+        </div>
+        <div class="job job-1">
+          <a href="">
+            <i class="fas fa-laptop-code fa-3x"></i>
+          </a>
+          <h3>Front-End Developer</h3>
+          <p>
+            I like to code things from scratch, and enjoy bringing ideas to life
+            in the browser. My most recent projects have been built using Ruby
+            on rails, which have included an array of languages, inluding my
+            latest language Sass, which is a quicker and more elegant extension
+            to css
+          </p>
+          <h4>Dev Languages:</h4>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Wordpress</li>
+            <li>Bootstrap</li>
+            <li>Sass</li>
+            <li>Ruby on Rails</li>
+            <li>Python</li>
+          </ul>
+          <h4>Dev Tools:</h4>
+          <ul class="dev-tools-ul">
+            <li>Visual Studio Code</li>
+            <li>Github</li>
+            <li>Heroku</li>
+            <li>Codepen</li>
+            <li>Terminal</li>
+          </ul>
+        </div>
+        <div class="job job-2">
+          <a href="">
+            <i class="far fa-object-group fa-3x"></i>
+          </a>
+          <h3>Designer</h3>
+          <p>
+            My usual routine consists of doing a rough mock-up in either
+            wireframes or keynote. If I'm happy with the layout I'll bring it to
+            life in using Photshop
+          </p>
+          <h4>Design Tools:</h4>
+          <ul>
+            <li>Adobe Photoshop</li>
+            <li>Adobe illustrator</li>
+            <li>Wireframes</li>
+            <li>Pen and Paper</li>
+            <li>Sketch</li>
+            <li>Keynote</li>
+          </ul>
+        </div>
+        <div class="job job-3">
+          <h3>Software proficiency</h3>
+          <h4>Development:</h4>
+          <div class="html-container">
+            <a href="">
+              <i class="fab fa-html5 fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-html"></div>
+          </div>
+
+          <div class="css-container">
+            <a href="">
+              <i class="fab fa-css3-alt fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-css"></div>
+          </div>
+          <div class="js-container">
+            <a href="">
+              <i class="fab fa-js-square fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-js"></div>
+          </div>
+          <div class="wp-container">
+            <a href="">
+              <i class="fab fa-wordpress fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-wp"></div>
+          </div>
+          <div class="boot-container">
+            <a href="">
+              <i class="fab fa-bootstrap fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-boot"></div>
+          </div>
+          <div class="sass-container">
+            <a href="">
+              <i class="fab fa-sass fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-sass"></div>
+          </div>
+          <div class="ruby-container">
+            <a href="">
+              <i class="fas fa-gem fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-ruby"></div>
+          </div>
+          <div class="python-container">
+            <a href="">
+              <i class="fab fa-python fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-python"></div>
+          </div>
+          <!--<div
+          line-progressbar
+          data-percentage="25"
+          data-unit="%"
+          data-animation="true"
+          data-showcount="true"
+          data-duration="1000"
+          data-progress-color="#eece1a"
+          data-bg-color="#EEEEEE"
+          data-radius="0px"
+          data-height="10px"
+          data-width="100%"
+        ></div> -->
+          <h4>Design:</h4>
+          <div class="ps-container">
+            <a href="">
+              <i class="fab fa-adobe fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-ps"></div>
+          </div>
+          <div class="pencil-container">
+            <a href="">
+              <i class="fas fa-pencil-alt fa-2x fa-fw"></i>
+            </a>
+            <div id="progressbar-pencil"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer">
+      Copyright &copy; 2020
+    </footer>
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="js/jquery.lineProgressbar.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

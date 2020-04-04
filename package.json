@@ -3,20 +3,13 @@
   "version": "1.0.0",
   "description": "Responsive portfolio",
   "main": "index.js",
-  "homepage": "https://RyanWD.github.io/Portfolio2020",
+  "homepage": "https://RyanWD.github.io/Portfolio",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RyanWD/Portfolio2020.git"
-  },
   "author": "Ryan Saunders",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RyanWD/Portfolio2020/issues"
-  },
   "dependencies": {
     "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1"

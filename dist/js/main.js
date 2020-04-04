@@ -35,3 +35,36 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+// Progress bars
+
+$("#progressbar-html").LineProgressbar({
+  percentage: 95
+});
+$("#progressbar-css").LineProgressbar({
+  percentage: 90
+});
+$("#progressbar-js").LineProgressbar({
+  percentage: 60
+});
+$("#progressbar-wp").LineProgressbar({
+  percentage: 60
+});
+$("#progressbar-boot").LineProgressbar({
+  percentage: 85
+});
+$("#progressbar-sass").LineProgressbar({
+  percentage: 70
+});
+$("#progressbar-ruby").LineProgressbar({
+  percentage: 50
+});
+$("#progressbar-python").LineProgressbar({
+  percentage: 45
+});
+$("#progressbar-ps").LineProgressbar({
+  percentage: 75
+});
+$("#progressbar-pencil").LineProgressbar({
+  percentage: 70
+});

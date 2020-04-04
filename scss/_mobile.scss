@@ -1,13 +1,39 @@
 // Widescreens
 @include mediaXL {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 // Desktops & laptops
 @include mediaLg {
+  .about-info {
+    display: grid;
+    grid-template-areas:
+      "bioimage bio"
+      "job1 job2"
+      "job3 job3";
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c c";
+    .item:nth-child(1) {
+      grid-area: a;
+    }
+    .item:nth-child(2) {
+      grid-area: b;
+    }
+    .item:nth-child(3) {
+      grid-area: c;
+    }
+  }
+  .fun {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .current-project {
+    grid-template-areas:
+      "a a a a a a"
+      "b b b b b b";
   }
 }
 // Tablets & Small Laptops
@@ -59,6 +85,27 @@
 
   .projects {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c c";
+    .item:nth-child(1) {
+      grid-area: a;
+    }
+    .item:nth-child(2) {
+      grid-area: b;
+    }
+    .item:nth-child(3) {
+      grid-area: c;
+    }
+  }
+  .current-project {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+  .current-project-text {
+    text-align: left;
   }
 }
 // Smartphones
@@ -80,5 +127,27 @@
 
   .projects {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+    .item:nth-child(1) {
+      grid-area: a;
+    }
+    .item:nth-child(2) {
+      grid-area: b;
+    }
+    .item:nth-child(3) {
+      grid-area: c;
+    }
+  }
+  .current-project {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+  .current-project-text {
+    text-align: left;
   }
 }

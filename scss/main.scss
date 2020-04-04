@@ -100,23 +100,90 @@ main {
   .job-2 {
     grid-area: job2;
   }
+  .job-1 {
+    text-align: center;
+    i {
+      margin: 1rem;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 0.25rem 0;
+      }
+    }
+    ul.dev-tools-ul {
+      margin-bottom: 1rem;
+    }
+  }
+  .job-2 {
+    @extend .job-1;
+    ul {
+      margin-bottom: 1rem;
+    }
+  }
   .job-3 {
     grid-area: job3;
+    h3,
+    h4 {
+      text-align: center;
+    }
   }
 
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    h3 {
+      color: $secondary-color;
+      font-size: 1.5rem;
+    }
+  }
+
+  // Progress area
+
+  .progress-containers {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    padding: 5px;
+  }
+
+  .html-container,
+  .css-container,
+  .js-container,
+  .wp-container,
+  .boot-container,
+  .sass-container,
+  .ruby-container,
+  .python-container,
+  .ps-container,
+  .pencil-container {
+    @extend .progress-containers;
+    a {
+      color: set-text-color($primary-color);
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
   }
 }
 
 // Work / Projects
-
+#work {
+  .sm-heading:nth-of-type(2),
+  .sm-heading:nth-of-type(3) {
+    margin-top: 2rem;
+  }
+}
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem;
+
   img {
     width: 100%;
     border: 3px solid #fff;
@@ -127,6 +194,48 @@ main {
     }
   }
 }
+
+.fun {
+  @extend .projects;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.current-project {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". a a b b b";
+  .item {
+    grid-area: b;
+    position: relative;
+    img {
+      width: 100%;
+      border: 3px solid #fff;
+      opacity: 0.3;
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondary-color;
+        @include easeOut;
+      }
+    }
+    .middle {
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+  .current-project-text {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+    grid-area: a;
+  }
+}
+
 // Contact page
 
 .boxes {

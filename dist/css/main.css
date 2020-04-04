@@ -171,28 +171,122 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .job-1 {
+  .about-info .job-1, .about-info .job-2 {
     grid-area: job1; }
   .about-info .job-2 {
     grid-area: job2; }
+  .about-info .job-1, .about-info .job-2 {
+    text-align: center; }
+    .about-info .job-1 i, .about-info .job-2 i {
+      margin: 1rem; }
+    .about-info .job-1 ul, .about-info .job-2 ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .about-info .job-1 ul li, .about-info .job-2 ul li {
+        padding: 0.25rem 0; }
+    .about-info .job-1 ul.dev-tools-ul, .about-info .job-2 ul.dev-tools-ul {
+      margin-bottom: 1rem; }
+  .about-info .job-2 ul {
+    margin-bottom: 1rem; }
   .about-info .job-3 {
     grid-area: job3; }
+    .about-info .job-3 h3,
+    .about-info .job-3 h4 {
+      text-align: center; }
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+    .about-info .job h3 {
+      color: #eece1a;
+      font-size: 1.5rem; }
+  .about-info .progress-containers, .about-info .html-container,
+  .about-info .css-container,
+  .about-info .js-container,
+  .about-info .wp-container,
+  .about-info .boot-container,
+  .about-info .sass-container,
+  .about-info .ruby-container,
+  .about-info .python-container,
+  .about-info .ps-container,
+  .about-info .pencil-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    padding: 5px; }
+  .about-info .html-container a,
+  .about-info .css-container a,
+  .about-info .js-container a,
+  .about-info .wp-container a,
+  .about-info .boot-container a,
+  .about-info .sass-container a,
+  .about-info .ruby-container a,
+  .about-info .python-container a,
+  .about-info .ps-container a,
+  .about-info .pencil-container a {
+    color: #fff; }
+    .about-info .html-container a:hover,
+    .about-info .css-container a:hover,
+    .about-info .js-container a:hover,
+    .about-info .wp-container a:hover,
+    .about-info .boot-container a:hover,
+    .about-info .sass-container a:hover,
+    .about-info .ruby-container a:hover,
+    .about-info .python-container a:hover,
+    .about-info .ps-container a:hover,
+    .about-info .pencil-container a:hover {
+      color: #eece1a;
+      transition: all 0.5s ease-out; }
 
-.projects {
+#work .sm-heading:nth-of-type(2),
+#work .sm-heading:nth-of-type(3) {
+  margin-top: 2rem; }
+
+.projects, .fun {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem; }
-  .projects img {
+  .projects img, .fun img {
     width: 100%;
     border: 3px solid #fff; }
-    .projects img:hover {
+    .projects img:hover, .fun img:hover {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+
+.fun {
+  grid-template-columns: repeat(2, 1fr); }
+
+.current-project {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". a a b b b"; }
+  .current-project .item {
+    grid-area: b;
+    position: relative; }
+    .current-project .item img {
+      width: 100%;
+      border: 3px solid #fff;
+      opacity: 0.3; }
+      .current-project .item img:hover {
+        opacity: 0.5;
+        border-color: #eece1a;
+        transition: all 0.5s ease-out; }
+    .current-project .item .middle {
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center; }
+  .current-project .current-project-text {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid;
+    grid-area: a; }
 
 .boxes {
   display: flex;
@@ -237,13 +331,25 @@ main {
   color: #fff;
   height: 60px; }
 
-@media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
-
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+  .about-info {
+    display: grid;
+    grid-template-areas: "bioimage bio" "job1 job2" "job3 job3";
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px; }
+  .projects, .fun {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a b" "c c"; }
+    .projects .item:nth-child(1), .fun .item:nth-child(1) {
+      grid-area: a; }
+    .projects .item:nth-child(2), .fun .item:nth-child(2) {
+      grid-area: b; }
+    .projects .item:nth-child(3), .fun .item:nth-child(3) {
+      grid-area: c; }
+  .fun {
+    grid-template-columns: repeat(2, 1fr); }
+  .current-project {
+    grid-template-areas: "a a a a a a" "b b b b b b"; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -276,8 +382,20 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr;
     grid-gap: 30px; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  .projects, .fun {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a b" "c c"; }
+    .projects .item:nth-child(1), .fun .item:nth-child(1) {
+      grid-area: a; }
+    .projects .item:nth-child(2), .fun .item:nth-child(2) {
+      grid-area: b; }
+    .projects .item:nth-child(3), .fun .item:nth-child(3) {
+      grid-area: c; }
+  .current-project {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b"; }
+  .current-project-text {
+    text-align: left; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -287,5 +405,17 @@ main {
   main h1.lg-heading {
     margin-top: 1rem;
     font-size: 5rem; }
-  .projects {
-    grid-template-columns: 1fr; } }
+  .projects, .fun {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c"; }
+    .projects .item:nth-child(1), .fun .item:nth-child(1) {
+      grid-area: a; }
+    .projects .item:nth-child(2), .fun .item:nth-child(2) {
+      grid-area: b; }
+    .projects .item:nth-child(3), .fun .item:nth-child(3) {
+      grid-area: c; }
+  .current-project {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b"; }
+  .current-project-text {
+    text-align: left; } }

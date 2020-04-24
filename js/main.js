@@ -45,10 +45,10 @@ $("#progressbar-css").LineProgressbar({
   percentage: 90
 });
 $("#progressbar-js").LineProgressbar({
-  percentage: 60
+  percentage: 90
 });
 $("#progressbar-wp").LineProgressbar({
-  percentage: 60
+  percentage: 80
 });
 $("#progressbar-boot").LineProgressbar({
   percentage: 85
@@ -57,13 +57,13 @@ $("#progressbar-sass").LineProgressbar({
   percentage: 70
 });
 $("#progressbar-ruby").LineProgressbar({
-  percentage: 50
+  percentage: 65
 });
 $("#progressbar-python").LineProgressbar({
-  percentage: 45
+  percentage: 55
 });
 $("#progressbar-ps").LineProgressbar({
-  percentage: 75
+  percentage: 80
 });
 $("#progressbar-pencil").LineProgressbar({
   percentage: 70
